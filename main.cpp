@@ -14,7 +14,7 @@
 
 using namespace std;
 
-
+// Averages each test score
 void print_TestAvgs(double grades[][5], int rows){
     double tempAvg = 0.0;
     for (int iterCol = 0; iterCol < 5; iterCol++){
@@ -32,6 +32,7 @@ void print_TestAvgs(double grades[][5], int rows){
     cout << endl;
 }
 
+// Averages each students score and displays each students records
 void print_grades(double grades[][5], int rows){
     rows = rows - 1;
     for (int i = 0; i <= rows ; i++){
@@ -53,6 +54,7 @@ void print_grades(double grades[][5], int rows){
 
 }
 
+// main function reads in data from .txt file database and calls functions to output table
 int main() {
 
     int col;
