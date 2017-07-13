@@ -4,8 +4,9 @@
 //
 //  Created by Christopher Orlik on 3/29/17.
 //  Copyright © 2017 Christopher Orlik. All rights reserved.
-// This program reads in a set amount of test scores from a .txt file into
-// a multi-dimensional array and calculates averages
+//
+// This program reads in test scores from a .txt file database into an array
+// then calculates student and class averages and prints them out
 //
 
 #include <iostream>
@@ -14,7 +15,7 @@
 
 using namespace std;
 
-// Averages each test score
+// Computes class average for each test score and outputs the score at the bottom of table
 void print_TestAvgs(double grades[][5], int rows){
     double tempAvg = 0.0;
     for (int iterCol = 0; iterCol < 5; iterCol++){
@@ -32,7 +33,7 @@ void print_TestAvgs(double grades[][5], int rows){
     cout << endl;
 }
 
-// Averages each students score and displays each students records
+// Averages each student's score for all tests and displays each students records
 void print_grades(double grades[][5], int rows){
     rows = rows - 1;
     for (int i = 0; i <= rows ; i++){
@@ -54,7 +55,10 @@ void print_grades(double grades[][5], int rows){
 
 }
 
-// main function reads in data from .txt file database and calls functions to output table
+// main function reads in data from .txt file database
+// then calculates individual students avg score on tests
+// assigns the average to the last column of each row of the array
+// then calls the two print functions to output table
 int main() {
 
     int col;
